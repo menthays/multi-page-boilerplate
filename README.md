@@ -1,10 +1,13 @@
-# test
+# igmt-vue-cli-multipage
 
-> A Vue.js project
+> a vue-cli for multipage projects
 
 ## Build Setup
 
 ``` bash
+# delete .git
+rm -rf .git
+
 # install dependencies
 npm install
 
