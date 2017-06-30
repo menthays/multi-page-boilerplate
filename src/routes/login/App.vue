@@ -11,7 +11,7 @@
 export default {
   data () {
     return {
-      msg: 'this is login'
+      msg: 'This is login.'
     }
   }
 }

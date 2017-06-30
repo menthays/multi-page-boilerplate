@@ -1,6 +1,7 @@
 <template lang="html">
 <div>
   <h2>{{msg}}</h2>
+  <g-welcome></g-welcome>
 </div>
 </template>
 
@@ -8,11 +9,15 @@
 </style>
 
 <script>
+import Welcome from '@/components/welcome'
 export default {
   data () {
     return {
-      msg: 'this is index'
+      msg: 'This is index.'
     }
+  },
+  components:{
+    'g-welcome':Welcome
   }
 }
 </script>
