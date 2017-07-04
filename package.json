@@ -1,7 +1,7 @@
 {
-  "name": "igmt-vue-cli-multipage",
+  "name": "multi-page-cli",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "vue-cli for multi-page application",
   "author": "yang.hao <yang.hao@igarment.net>",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
     "lint": "eslint --ext .js,.vue src test/unit/specs"
   },
   "dependencies": {
+    "es6-promise": "^4.1.1",
     "jquery": "^3.2.1",
     "vue": "^2.3.3"
   },

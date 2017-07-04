@@ -66,6 +66,7 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
+      Promise: 'es6-promise',
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
