@@ -1,6 +1,6 @@
-# igmt-vue-cli-multipage
+# multi-page-boilerplate
 
-> a vue-cli for multipage projects
+> a vue boilerplate for multipage projects
 
 ## Build Setup
 
