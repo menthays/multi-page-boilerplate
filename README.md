@@ -5,8 +5,11 @@
 ## Build Setup
 
 ``` bash
-# delete .git
-rm -rf .git
+# downloading template
+vue init
+
+# cd into your project path
+cd [project-path]
 
 # install dependencies
 npm install

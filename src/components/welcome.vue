@@ -2,7 +2,12 @@
   <transition name="fade">
     <div class="wrapper" v-if="display">
       <div class="popover" @click="hide">
-        <span class="text">Welcome to iGarment vue-cli</span>
+        <ul class="list">
+          <li>1. Add new pages in '/src/routes/'</li>
+          <li>2. Jquery and polyfill for 'Promise' are provided as global plugin, you can modify it in /build/webpack.base.config.js</li>
+          <li>3. Eslint loader is commented out.</li>
+          <li>4. Have fun!</li>
+        </ul>
       </div>
     </div>
   </transition>
@@ -41,24 +46,21 @@ export default {
 }
 .popover{
   cursor: pointer;
-  width: 50%;
-  height: 50%;
-  background-color: rgba(176,196,222, 0.5);
+  width: 38.2%;
+  height: auto;
+  background-color: rgb(255, 255, 255);
   border-radius: 10px;
   text-align: center;
   z-index: 102;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.text{
-  vertical-align: middle;
-  transform: rotate(-7deg);
-  font-size: 61.8px;
-  font-weight: 600;
-  background: linear-gradient(to bottom right, #ff9933, yellow);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.list{
+  font-size: 24px;
+  line-height: 3;
+  text-align: left;
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity 1s
