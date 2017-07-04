@@ -1,9 +1,8 @@
 {
-  "name": "multi-page-cli",
+  "name": "multi-page-boilerplate",
   "version": "1.0.0",
-  "description": "vue-cli for multi-page application",
-  "author": "yang.hao <yang.hao@igarment.net>",
-  "private": true,
+  "description": "a vue boilerplate for multipage projects",
+  "author": "menthays",
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
@@ -92,5 +91,5 @@
   "directories": {
     "test": "test"
   },
-  "license": "ISC"
+  "license": "MIT"
 }
