@@ -6,7 +6,7 @@
 
 ``` bash
 # downloading template
-vue init
+vue init menthays/multi-page-boilerplate [project-name]
 
 # cd into your project path
 cd [project-path]
