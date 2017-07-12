@@ -15,7 +15,7 @@ var htmlPlugins = Object.keys(entries).map(key=>(
     filename:`${key}.html`,
     template:`src/routes/${key}/${key}.html`,
     inject: true,
-    chunks: ['vendor', 'mainfest', key],
+    chunks: ['manifest', 'vendor', key],
     minify: {
       removeComments: true,
       collapseWhitespace: true,
