@@ -30,8 +30,6 @@ npm run unit
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
 ## Features
 
 * Vue2 boilerplate for multi-page application mainly based on [vuejs-templates/webpack
@@ -42,4 +40,4 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 
 ## License
 
-[MIT](https://github.com/jikkai/vue-ele-starter/blob/master/LICENSE)
+MIT
