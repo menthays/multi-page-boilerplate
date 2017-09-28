@@ -4,17 +4,17 @@
   "description": "a vue boilerplate for multipage projects",
   "author": "menthays",
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
-    "build": "node build/build.js",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "dev": "node client/build/dev-server.js",
+    "start": "node client/build/dev-server.js",
+    "build": "node client/build/build.js",
+    "unit": "cross-env BABEL_ENV=test karma start client/test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src test/unit/specs"
+    "lint": "eslint --ext .js,.vue src client/test/unit/specs"
   },
   "dependencies": {
     "es6-promise": "^4.1.1",
     "jquery": "^3.2.1",
-    "vue": "^2.3.3"
+    "vue": "^2.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",

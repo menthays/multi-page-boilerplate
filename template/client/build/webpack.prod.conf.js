@@ -13,7 +13,7 @@ var entries = require('../config/entries')
 var htmlPlugins = Object.keys(entries).map(key=>(
   new HtmlWebpackPlugin({
     filename:`${key}.html`,
-    template:`src/routes/${key}/${key}.html`,
+    template:`client/src/routes/${key}/${key}.html`,
     inject: true,
     chunks: ['manifest', 'vendor', key],
     minify: {
@@ -73,7 +73,7 @@ var webpackConfig = merge(baseWebpackConfig, {
           module.resource &&
           /\.js$/.test(module.resource) &&
           module.resource.indexOf(
-            path.join(__dirname, '../node_modules')
+            path.join(__dirname, '../../node_modules')
           ) === 0
         )
       }

@@ -10,7 +10,7 @@ var entries = require('../config/entries')
 var htmlPlugins = Object.keys(entries).map(key=>(
   new HtmlWebpackPlugin({
     filename:`${key}.html`,
-    template:`src/routes/${key}/${key}.html`,
+    template:`client/src/routes/${key}/${key}.html`,
     inject: true,
     chunks: ['manifest', 'vendor', key]
   })
@@ -18,7 +18,7 @@ var htmlPlugins = Object.keys(entries).map(key=>(
 
 // add hot-reload related code to entry chunks
 Object.keys(baseWebpackConfig.entry).forEach(function (name) {
-  baseWebpackConfig.entry[name] = ['./build/dev-client'].concat(baseWebpackConfig.entry[name])
+  baseWebpackConfig.entry[name] = ['./client/build/dev-client'].concat(baseWebpackConfig.entry[name])
 })
 
 module.exports = merge(baseWebpackConfig, {
