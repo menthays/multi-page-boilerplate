@@ -2,7 +2,7 @@
   "name": "multi-page-boilerplate",
   "version": "1.0.0",
   "description": "a vue boilerplate for multipage projects",
-  "author": "menthays",
+  "author": "Tillo <tillohao@gmail.com>",
   "scripts": {
     "dev": "node client/build/dev-server.js",
     "start": "node client/build/dev-server.js",
@@ -87,9 +87,17 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "main": ".eslintrc.js",
   "directories": {
     "test": "test"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/menthays/multi-page-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/menthays/multi-page-boilerplate/issues"
+  },
+  "homepage": "https://github.com/menthays/multi-page-boilerplate#readme"
 }
