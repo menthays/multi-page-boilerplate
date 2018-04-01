@@ -1,43 +1,44 @@
 # multi-page-boilerplate
+- A simple multi-page-boilerplate integrated with modern front-end tools.
 
-> a vue boilerplate for multipage projects
+## Feature
+- webpack4 & babel
+- sass & postcss
+- jest
+- eslint & prettier
 
-## Build Setup
+# How to use
 
-``` bash
-# downloading template
-vue init menthays/multi-page-boilerplate [project-name]
+Install
 
-# cd into your project path
-cd [project-path]
-
-# install dependencies
+````bash
+# git clone 
+git clone https://github.com/menthays/multi-page-boilerplate.git
+# install dependency
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
+# rm .git
+rm -rf .git
 ```
 
-## Features
+Provide a modern develop environment
 
-* Vue2 boilerplate for multi-page application mainly based on [vuejs-templates/webpack
-](https://github.com/vuejs-templates/webpack)
-* Eslint has been commented out, cancel it as you like
-* Add global plugin support for jquery and polyfill for Promise. Enjoy it!
+```bash
+# run dev with hot reloading
+npm run dev
+# build for publish
+npm run build
+```
 
+Using test and eslint prettier to keep code quality
+
+```bash
+# check code style
+npm run lint
+# format code 
+npm run format
+# run test
+npm run test
+```
 
 ## License
-
 MIT
