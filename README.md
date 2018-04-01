@@ -11,7 +11,7 @@
 
 Install
 
-````bash
+```bash
 # git clone 
 git clone https://github.com/menthays/multi-page-boilerplate.git
 # install dependency
