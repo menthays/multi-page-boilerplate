@@ -20,39 +20,62 @@ module.exports = {
     rules: utils.styleLoaders().concat([
       {
         test: /\.html$/,
-        loader: 'html-loader'
+        use: [
+          {
+            loader: require.resolve('html-loader'),
+            options: {
+              minimize: true
+            }
+          }
+        ]
       },
       {
         test: /\.(js|jsx|mjs)$/,
         include: path.resolve(__dirname, 'src'),
-        loader: require.resolve('babel-loader'),
-        options: {
-          cacheDirectory: true
-        }
+        use: [
+          {
+            loader: require.resolve('babel-loader'),
+            options: {
+              cacheDirectory: true
+            }
+          }
+        ]
       },
       {
         test: [/\.(bmp|gif|jpe?g|png|svg)(\?.*)?$/],
-        loader: require.resolve('url-loader'),
-        options: {
-          limit: 10000,
-          name: 'assets/img/[name].[hash:7].[ext]'
-        }
+        use: [
+          {
+            loader: require.resolve('url-loader'),
+            options: {
+              limit: 10000,
+              name: 'assets/img/[name].[hash:7].[ext]'
+            }
+          }
+        ]
       },
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: 'assets/media/[name].[hash:7].[ext]'
-        }
+        use: [
+          {
+            loader: require.resolve('url-loader'),
+            options: {
+              limit: 10000,
+              name: 'assets/media/[name].[hash:7].[ext]'
+            }
+          }
+        ]
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: 'assets/fonts/[name].[hash:7].[ext]'
-        }
+        use: [
+          {
+            loader: require.resolve('url-loader'),
+            options: {
+              limit: 10000,
+              name: 'assets/fonts/[name].[hash:7].[ext]'
+            }
+          }
+        ]
       }
     ])
   },
@@ -76,6 +99,13 @@ module.exports = {
 if (process.env.NODE_ENV === 'production') {
   module.exports.output.publicPath = './';
   module.exports.optimization = {
+    splitChunks: {
+      chunks: 'all',
+      name: 'common'
+    },
+    runtimeChunk: {
+      name: 'runtime'
+    },
     minimizer: [
       new UglifyJsPlugin({
         cache: true,
@@ -89,8 +119,7 @@ if (process.env.NODE_ENV === 'production') {
     new CleanWebpackPlugin(['dist']),
     // Extract css into its own file
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
+      filename: 'assets/css/[name].css'
     }),
     new webpack.BannerPlugin({
       banner: `console.log("Last modification time: ${new Date().toLocaleString()}");`,

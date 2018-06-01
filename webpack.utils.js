@@ -27,10 +27,10 @@ exports.cssLoaders = function() {
 
     // Extract CSS when that option is specified
     // (which is the case during production build)
-    if (process.env.NODE_ENV === 'production') {
-      loaders.unshift(MiniCssExtractPlugin.loader);
-    }
-    return [styleLoader, ...loaders];
+    return [
+      process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : styleLoader,
+      ...loaders
+    ];
   }
 
   return {
