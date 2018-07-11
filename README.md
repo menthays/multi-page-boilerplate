@@ -12,7 +12,7 @@
 Install
 
 ```bash
-# git clone 
+# git clone
 git clone https://github.com/menthays/multi-page-boilerplate.git
 # install dependency
 npm install
@@ -34,11 +34,10 @@ Using test and eslint prettier to keep code quality
 ```bash
 # check code style
 npm run lint
-# format code 
-npm run format
 # run test
 npm run test
 ```
+And lint-staged will always help you to format code when you do commit
 
 ## License
 MIT
