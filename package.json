@@ -10,10 +10,11 @@
   },
   "scripts": {
     "test": "jest ./test",
-    "lint": "eslint . --ignore-path .gitignore",
+    "lint": "eslint src/**/*.{js,jsx} --fix",
     "dev": "cross-env NODE_ENV=development webpack-serve",
     "start": "npm run dev",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "precommit": "lint-staged"
   },
   "husky": {
     "hooks": {
@@ -21,7 +22,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "src/**/*.{js,jsx}": ["eslint --fix", "git add"],
+    "src/**/*.{css,scss,json,md}": ["prettier --write", "git add"]
   },
   "browserslist": [
     "> 1%",
