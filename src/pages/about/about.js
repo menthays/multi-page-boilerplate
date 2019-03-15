@@ -3,7 +3,9 @@ import './about.scss';
 const displayTimer = callback =>
   setInterval(() => {
     document.body.innerHTML = `Now: ${new Date().toLocaleString()}`;
-    callback();
+    if (callback) {
+      callback();
+    }
   }, 1000);
 
 displayTimer();
